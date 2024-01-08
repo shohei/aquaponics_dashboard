@@ -3,7 +3,6 @@ powered by ROS, InfluxDB, Grafana
 
 ![](image/dash.png)
 
-
 ## Connection 
 Connect Arduino and Raspberry Pi via USB cable
 
@@ -15,10 +14,31 @@ $ roscore
 ```
 $ rosrun rosserial_python serial_node.py /dev/ttyACM0
 ```
-## Launch receiver 
+## Launch server
 ```
-$ ./receiver.py
+$ cd script
+$ python server.py
 ```
+
+## Launch camera server
+**1st camera (RAW image)**
+
+streamed on <IP>:5000/stream
+
+```
+$ cd camera
+$ python app.py
+```
+
+**2nd camera (Face detection)**
+
+streamed on <IP>:5001/stream2
+
+```
+$ cd camera_facedetection
+$ python app.py
+```
+
 
 ## Install InfluxDB (server and python client) and Grafana
 ```
