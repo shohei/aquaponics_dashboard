@@ -1,6 +1,8 @@
 ## Aquaponics dashboard
 powered by ROS, InfluxDB, Grafana
+
 ![](image/dash.png)
+
 
 ## Connection 
 Connect Arduino and Raspberry Pi via USB cable
