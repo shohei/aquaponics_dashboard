@@ -241,7 +241,7 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 5,
+        "w": 6,
         "x": 13,
         "y": 3
       },
@@ -456,25 +456,23 @@
         "type": "influxdb",
         "uid": "d858f56a-f5f8-4b7e-ae8c-43cd4cf97822"
       },
-      "description": "",
       "gridPos": {
-        "h": 8,
-        "w": 7,
-        "x": 0,
+        "h": 9,
+        "w": 8,
+        "x": 1,
         "y": 11
       },
-      "id": 8,
+      "id": 10,
       "options": {
         "autoPlay": true,
-        "backgroundColor": "transparent",
         "customBackground": false,
         "geolocate": false,
-        "iframeURL": "http://192.168.1.221:8080/stream_simple.html",
+        "iframeURL": "http://192.168.1.221:5000/stream",
         "loop": true,
         "videoId": "eQpyJQ2womo",
         "videoType": "iframe"
       },
-      "title": "Fish camera",
+      "title": "Panel Title",
       "type": "innius-video-panel"
     },
     {
@@ -483,9 +481,9 @@
         "uid": "d858f56a-f5f8-4b7e-ae8c-43cd4cf97822"
       },
       "gridPos": {
-        "h": 8,
+        "h": 9,
         "w": 7,
-        "x": 7,
+        "x": 11,
         "y": 11
       },
       "id": 9,
@@ -493,7 +491,7 @@
         "autoPlay": true,
         "customBackground": false,
         "geolocate": false,
-        "iframeURL": "http://192.168.1.221:8080/stream_simple.html",
+        "iframeURL": "http://192.168.1.221:5001/stream2",
         "loop": true,
         "videoId": "eQpyJQ2womo",
         "videoType": "iframe"
@@ -516,6 +514,6 @@
   "timezone": "",
   "title": "Aquaponics dashboard",
   "uid": "bcf8841a-6d20-4e46-ba25-f8e057d096be",
-  "version": 4,
+  "version": 5,
   "weekStart": ""
 }
