@@ -78,8 +78,8 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
-        "w": 8,
+        "h": 4,
+        "w": 7,
         "x": 0,
         "y": 3
       },
@@ -159,9 +159,9 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
-        "w": 7,
-        "x": 8,
+        "h": 4,
+        "w": 6,
+        "x": 7,
         "y": 3
       },
       "id": 4,
@@ -240,9 +240,9 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
-        "w": 7,
-        "x": 15,
+        "h": 4,
+        "w": 5,
+        "x": 13,
         "y": 3
       },
       "id": 6,
@@ -319,10 +319,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
+        "h": 4,
         "w": 7,
-        "x": 1,
-        "y": 9
+        "x": 0,
+        "y": 7
       },
       "id": 5,
       "options": {
@@ -400,10 +400,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
-        "w": 7,
-        "x": 8,
-        "y": 9
+        "h": 4,
+        "w": 6,
+        "x": 7,
+        "y": 7
       },
       "id": 7,
       "options": {
@@ -450,22 +450,72 @@
       ],
       "title": "EC",
       "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "d858f56a-f5f8-4b7e-ae8c-43cd4cf97822"
+      },
+      "description": "",
+      "gridPos": {
+        "h": 8,
+        "w": 7,
+        "x": 0,
+        "y": 11
+      },
+      "id": 8,
+      "options": {
+        "autoPlay": true,
+        "backgroundColor": "transparent",
+        "customBackground": false,
+        "geolocate": false,
+        "iframeURL": "http://192.168.1.221:8080/stream_simple.html",
+        "loop": true,
+        "videoId": "eQpyJQ2womo",
+        "videoType": "iframe"
+      },
+      "title": "Fish camera",
+      "type": "innius-video-panel"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "d858f56a-f5f8-4b7e-ae8c-43cd4cf97822"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 7,
+        "x": 7,
+        "y": 11
+      },
+      "id": 9,
+      "options": {
+        "autoPlay": true,
+        "customBackground": false,
+        "geolocate": false,
+        "iframeURL": "http://192.168.1.221:8080/stream_simple.html",
+        "loop": true,
+        "videoId": "eQpyJQ2womo",
+        "videoType": "iframe"
+      },
+      "title": "Fish camera 2",
+      "type": "innius-video-panel"
     }
   ],
-  "refresh": "5s",
+  "refresh": "auto",
   "schemaVersion": 39,
   "tags": [],
   "templating": {
     "list": []
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Aquaponics dashboard",
   "uid": "bcf8841a-6d20-4e46-ba25-f8e057d096be",
-  "version": 3,
+  "version": 4,
   "weekStart": ""
 }
