@@ -25,7 +25,7 @@ class Server():
     
         rospy.Subscriber("temperature", String, self.callback_temp)
         rospy.Subscriber("humidity", String, self.callback_humid)
-        rospy.Subscriber("moisture", String, self.callback_moist)
+        rospy.Subscriber("soil_moisture", String, self.callback_moist)
         rospy.Subscriber("ph", String, self.callback_ph)
         rospy.Subscriber("ec", String, self.callback_ec)
     
@@ -40,7 +40,7 @@ class Server():
         self.humid = float(data.data)
     
     def callback_moist(self,data):
-        rospy.loginfo(rospy.get_caller_id() + "Soil moisture:%s", data.data)
+        #rospy.loginfo(rospy.get_caller_id() + "Soil moisture:%s", data.data)
         self.moist = float(data.data)
     
     def callback_ph(self,data):

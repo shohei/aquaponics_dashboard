@@ -28,7 +28,7 @@ def listener():
 
     rospy.Subscriber("temperature", String, callback_temp)
     rospy.Subscriber("humidity", String, callback_humid)
-    rospy.Subscriber("moisture", String, callback_moist)
+    rospy.Subscriber("soil_moisture", String, callback_moist)
     rospy.Subscriber("ph", String, callback_ph)
     rospy.Subscriber("ec", String, callback_ec)
 
