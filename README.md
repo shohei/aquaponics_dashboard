@@ -16,7 +16,7 @@ $ rosrun rosserial_python serial_node.py /dev/ttyACM0
 ```
 ## Launch server
 ```
-$ cd src/script
+$ cd src/server
 $ python server.py
 ```
 
