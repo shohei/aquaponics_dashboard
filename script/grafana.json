@@ -90,6 +90,112 @@
               "mode": "off"
             }
           },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 5,
+        "x": 16,
+        "y": 0
+      },
+      "id": 13,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "e10ddbdd-7910-40d8-b60b-338029a1952f"
+          },
+          "groupBy": [],
+          "measurement": "aquaponics_measurement",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "average_flow"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "title": "Average flow",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "e10ddbdd-7910-40d8-b60b-338029a1952f"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
           "decimals": 1,
           "mappings": [],
           "thresholds": {
@@ -189,7 +295,7 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 6,
+        "w": 4,
         "x": 8,
         "y": 3
       },
@@ -270,8 +376,8 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 6,
-        "x": 14,
+        "w": 4,
+        "x": 12,
         "y": 3
       },
       "id": 6,
@@ -351,7 +457,7 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 6,
+        "w": 4,
         "x": 8,
         "y": 7
       },
@@ -430,8 +536,8 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 6,
-        "x": 14,
+        "w": 4,
+        "x": 12,
         "y": 7
       },
       "id": 5,
@@ -487,7 +593,7 @@
       },
       "gridPos": {
         "h": 9,
-        "w": 8,
+        "w": 6,
         "x": 0,
         "y": 11
       },
@@ -507,12 +613,36 @@
     {
       "datasource": {
         "type": "influxdb",
+        "uid": "e10ddbdd-7910-40d8-b60b-338029a1952f"
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 6,
+        "x": 6,
+        "y": 11
+      },
+      "id": 12,
+      "options": {
+        "autoPlay": true,
+        "customBackground": false,
+        "geolocate": false,
+        "iframeURL": "http://192.168.1.221:5003/stream",
+        "loop": true,
+        "videoId": "eQpyJQ2womo",
+        "videoType": "iframe"
+      },
+      "title": "Contour",
+      "type": "innius-video-panel"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
         "uid": "d858f56a-f5f8-4b7e-ae8c-43cd4cf97822"
       },
       "gridPos": {
         "h": 9,
-        "w": 7,
-        "x": 9,
+        "w": 6,
+        "x": 12,
         "y": 11
       },
       "id": 9,
@@ -520,12 +650,12 @@
         "autoPlay": true,
         "customBackground": false,
         "geolocate": false,
-        "iframeURL": "http://192.168.1.221:5001/stream2",
+        "iframeURL": "http://192.168.1.221:5002/stream",
         "loop": true,
         "videoId": "eQpyJQ2womo",
         "videoType": "iframe"
       },
-      "title": "Fish camera 2",
+      "title": "Optical Flow",
       "type": "innius-video-panel"
     }
   ],
@@ -543,6 +673,6 @@
   "timezone": "",
   "title": "Aquaponics dashboard",
   "uid": "d507d7c3-7829-4c9e-8a69-e1aa45148fd6",
-  "version": 2,
+  "version": 6,
   "weekStart": ""
 }
