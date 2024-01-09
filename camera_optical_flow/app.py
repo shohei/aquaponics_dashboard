@@ -21,11 +21,10 @@ def gen(camera):
         if frame is not None:
             yield (b"--frame\r\n"
                 b"Content-Type: image/jpeg\r\n\r\n" + frame + b"\r\n")
-
             #yield (b'--frame\r\n'
-            #    b'Content-Type:image/jpeg\r\n'
-            #    b'Content-Length: ' + f"{len(frame)}".encode() + b'\r\n'
-            #    b'\r\n' + frame + b'\r\n')
+            #       b'Content-Type:image/jpeg\r\n'
+            #       b'Content-Length: ' + f"{len(frame)}".encode() + b'\r\n'
+            #       b'\r\n' + frame + b'\r\n')
 
         else:
             print("frame is none")
@@ -37,4 +36,4 @@ def video_feed():
 
 if __name__ == "__main__":
     app.debug = True
-    app.run(host="0.0.0.0", port=5001, threaded=True)
+    app.run(host="0.0.0.0", port=5002, threaded=True)

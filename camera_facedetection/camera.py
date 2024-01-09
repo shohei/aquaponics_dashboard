@@ -18,7 +18,8 @@ class Camera(BaseCamera):
     @staticmethod
     def frames():
         faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-        url = "http://192.168.1.221:5000/video_feed"
+        #url = "http://192.168.1.221:5000/video_feed"
+        url = "http://localhost:5000/video_feed"
 
         camera = cv2.VideoCapture(url)
         if not camera.isOpened():

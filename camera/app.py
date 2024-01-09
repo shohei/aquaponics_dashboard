@@ -19,8 +19,13 @@ def gen(camera):
         frame = camera.get_frame()
 
         if frame is not None:
-            yield (b"--frame\r\n"
-                b"Content-Type: image/jpeg\r\n\r\n" + frame + b"\r\n")
+            #yield (b"--frame\r\n"
+            #    b"Content-Type: image/jpeg\r\n\r\n" + frame + b"\r\n")
+            yield (b'--frame\r\n'
+                   b'Content-Type:image/jpeg\r\n'
+                   b'Content-Length: ' + f"{len(frame)}".encode() + b'\r\n'
+                   b'\r\n' + frame + b'\r\n')
+            
         else:
             print("frame is none")
 
