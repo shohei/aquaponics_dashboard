@@ -26,16 +26,26 @@ $ python server.py
 streamed on <IP>:5000/stream
 
 ```
-$ cd camera
+$ cd camera/camera_streaming
 $ python app.py
 ```
 
-**2nd camera (Face detection)**
+**2nd camera (Contour detection)**
 
-streamed on <IP>:5001/stream2
+streamed on <IP>:5003/stream
 
 ```
-$ cd camera_facedetection
+$ cd camera/camera_contour
+$ python app.py
+```
+
+
+**3rd camera (Optical flow)**
+
+streamed on <IP>:5001/stream
+
+```
+$ cd camera/camera_optical_flow
 $ python app.py
 ```
 
