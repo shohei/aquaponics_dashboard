@@ -16,7 +16,7 @@ $ rosrun rosserial_python serial_node.py /dev/ttyACM0
 ```
 ## Launch server
 ```
-$ cd script
+$ cd src/script
 $ python server.py
 ```
 
@@ -26,7 +26,7 @@ $ python server.py
 streamed on <IP>:5000/stream
 
 ```
-$ cd camera/camera_streaming
+$ cd src/camera/camera_streaming
 $ python app.py
 ```
 
@@ -35,7 +35,7 @@ $ python app.py
 streamed on <IP>:5003/stream
 
 ```
-$ cd camera/camera_contour
+$ cd src/camera/camera_contour
 $ python app.py
 ```
 
@@ -45,7 +45,7 @@ $ python app.py
 streamed on <IP>:5001/stream
 
 ```
-$ cd camera/camera_optical_flow
+$ cd src/camera/camera_optical_flow
 $ python app.py
 ```
 
@@ -61,9 +61,11 @@ $ sudo apt install grafana
 ```
 $ sudo  systemctl unmask influxdb
 $ sudo  systemctl start influxdb
+$ sudo  systemctl enable influxdb
 ```
 ## Launch Grafana (at :3000)
 ```
 $ sudo systemctl start grafana-server
+$ sudo systemctl enable grafana-server
 ```
 
